@@ -1,0 +1,55 @@
+更新时间：2008-11-13
+
+更新说明：本次更新到2.2正式版，修改内容比较多，请下载更新包，备份数据库后，覆盖源文件；
+
+更新内容：
+
+1.增加会员模块，注册会员可发表文章，并设置为私人文章；
+
+2.修改默认编辑器，改插入链接按钮为插入FLASH，默认尺寸：500*400；
+
+3.修正伪静态和文章静态文章分页代码错误；
+
+4.后台可选择开启关闭会员功能；
+
+5.修复单篇文章生成找不到文件的问题；
+
+6.其它一些操作BUG；
+
+
+手动修改说明：（已经修改过版面的朋友可参考）
+
+1.直接覆盖内容：
+
+    - admin
+    - article
+    - Edit
+    - images
+    - Inc
+    - UploadFiles
+    - User 七个文件夹
+    
+2.手动修改内容：
+
+    - class.asp
+    - guestbook.asp
+    - hot.asp
+    - inc.asp
+    - index.asp
+    - list.asp
+    - news.asp
+    - link.asp
+    - search.asp
+    - article/index.asp 十个文件
+    
+    找到<div style="z-index:40000"> 在下一行添加<%=head%>；
+    
+    inc/config.asp中请手动修改你的程序安装路径和网站域名
+    
+ 
+3.以上操作完成后，运行：http://www.***.com/update2.2.asp 升级数据库，
+
+    数据库增加pcook_user,pcook_UserGroup两个表，和pcook_Article表中增加UserID和UserName两项；
+
+
+更新包下载地址：http://pcook.com.cn/down/upload/upload20081113.rar
